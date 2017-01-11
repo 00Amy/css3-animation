@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		.wait {
+		  width: 70px;
+		  height: 50px;
+		}
+		.wait div {
+		  background: red;
+		  width: 6px;
+		  height: 100%;
+		  display: inline-block;
+		  -webkit-animation: strech 1.2s infinite ease-in-out;
+		  animation: strech 1.2s infinite ease-in-out;
+		}
+		.wait .rect2 {
+		  -webkit-animation-delay: -1.1s;
+		  animation-delay: -1.1s;
+		}
+		.wait .rect3 {
+		  -webkit-animation-delay: -1s;
+		  animation-delay: -1s;
+		}
+		.wait .rect4 {
+		  -webkit-animation-delay: -0.9s;
+		  animation-delay: -0.9s;
+		}
+		.wait .rect5 {
+		  -webkit-animation-delay: -0.8s;
+		  animation-delay: -0.8;
+		}
+		@-webkit-keyframes strech {
+		  0%,
+		  40%,
+		  100% {
+		    -webkit-transform: scaleY(0.4);
+		  }
+		  20% {
+		    -webkit-transform: scaleY(1);
+		  }
+		}
+		@keyframes strech {
+		  0%,
+		  40%,
+		  100% {
+		    transform: scaleY(0.4);
+		  }
+		  20% {
+		    transform: scaleY(1);
+		  }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wait">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div> 
+</body>
+</html>

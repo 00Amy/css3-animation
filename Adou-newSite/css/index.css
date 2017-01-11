@@ -1,0 +1,218 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: rgba(250, 183, 67, 0.9);
+}
+.body-content {
+  height: 300px;
+  width: 100%;
+  margin-top: 200px;
+  text-align: center;
+}
+.body-content .title1 {
+  font-size: 70px;
+  color: white;
+}
+.body-content .title1 .spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: inline-block;
+}
+.body-content .title1 .round-bounce1,
+.body-content .title1 .round-bounce2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.6;
+  -webkit-animation: bounce 3s infinite ease-in-out;
+  animation: bounce 3s infinite ease-in-out;
+}
+.body-content .title1 .round-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.body-content .content-button a {
+  display: inline-block;
+  border: 2px solid white;
+  height: 40px;
+  width: 200px;
+  margin-top: 30px;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  padding-top: 2px;
+  transition: 2s;
+  position: relative;
+}
+.body-content .content-button a span {
+  position: absolute;
+  height: 105%;
+  width: 0px;
+  left: -2px;
+  top: -2px;
+  transition: all 0.6s ease-in-out;
+}
+.body-content .content-button a:hover {
+  color: #2E9524;
+}
+.body-content .content-button a:hover span {
+  display: inline-block;
+  width: 101%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.tip {
+  position: relative;
+  color: white;
+  font-size: 17px;
+}
+.tip .tip1,
+.tip .tip2,
+.tip .tip3,
+.tip .tip4,
+.tip .tip5,
+.tip .tip6 {
+  position: absolute;
+  -webkit-animation: inOut 3s infinite ease-in-out;
+  animation: inOut 3s infinite ease-in-out;
+}
+@-webkit-keyframes inOut {
+  0%,
+  100% {
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes inOut {
+  0%,
+  100% {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.tip .tip1 {
+  top: -190px;
+  opacity: 0.6;
+  left: 290px;
+}
+.tip .tip2 {
+  top: -100px;
+  left: 380px;
+  opacity: 0.5;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.tip .tip3 {
+  top: -40px;
+  left: 590px;
+  opacity: 0.4;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+.tip .tip4 {
+  top: -60px;
+  left: 790px;
+  opacity: 0.8;
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s;
+}
+.tip .tip5 {
+  top: -100px;
+  left: 890px;
+  opacity: 0.6;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.tip .tip6 {
+  top: -200px;
+  left: 990px;
+  opacity: 0.7;
+}
+.page2 {
+  margin-top: 130px;
+  background: white;
+  height: 550px;
+  width: 100%;
+}
+.page2 .service .glyphicon {
+  font-size: 60px;
+  margin-top: 110px;
+  padding-left: 65px;
+  transition: all 0.5s ease-in-out;
+  color: #FBA919;
+}
+.page2 .service .col-md-2:hover .glyphicon {
+  -webkit-transform: scale(1.7) rotate(360deg);
+  -moz-transform: scale(1.7) rotate(360deg);
+  -o-transform: scale(1.7) rotate(360deg);
+  -ms-transform: scale(1.7) rotate(360deg);
+  transform: scale(1.7) rotate(360deg);
+}
+.page2 .service .col-md-2:hover .service-text {
+  background: #FBA919;
+}
+.page2 .service .col-md-2:hover .service-text span.en {
+  display: none;
+}
+.page2 .service .col-md-2:hover .service-text span.ch {
+  display: inline-block;
+}
+.page2 .service .service-text {
+  margin-top: 70px;
+  margin-left: 12px;
+  background: #FABE55;
+  width: 100%;
+  height: 110px;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.page2 .service .service-text span.ch {
+  display: none;
+}
+.page2 .service .service-text p {
+  color: white;
+  text-align: center;
+}
+.page3 {
+  background: #F3F3F3;
+  padding-bottom: 40px;
+}
+.page3 .carousel {
+  height: 390px;
+  width: 80%;
+  margin: 0px auto;
+}
+.page3 .carousel img {
+  height: 390px;
+  width: 100%;
+}

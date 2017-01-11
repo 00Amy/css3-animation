@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		.spinner{
+			width: 60px;
+			height: 60px;
+			position: relative;
+			display: inline-block;
+		}
+		.round-bounce1,.round-bounce2{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: red;
+			opacity: 0.6;
+			filter:alpha(opacity=0.6);
+			-webkit-animation:bounce 3s infinite ease-in-out;
+			animation:bounce 3s infinite ease-in-out;
+		}
+		.round-bounce2{
+			-webkit-animation-delay:-1.0s;
+			animation-delay:-1.0s;
+		}
+		@-webkit-keyframes bounce{
+			0%,100%{
+				-webkit-transform:scale(0);
+			}
+			50%{
+				-webkit-transform:scale(1);
+			}
+		}
+		@keyframes bounce{
+			0%,100%{
+				transform:scale(0);
+				-webkit-transform:scale(0);
+			}
+			50%{
+				transform:scale(1);
+				-webkit-transform:scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<span class="spinner">
+		<div class="round-bounce1"></div>
+		<div class="round-bounce2"></div>
+	</span>
+</body>
+</html>

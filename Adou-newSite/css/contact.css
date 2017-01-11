@@ -1,0 +1,103 @@
+.contact-page {
+  width: 80%;
+  height: 400px;
+  margin: 130px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #ffffff;
+}
+.contact-page .triangle span {
+  display: block;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border: 40px solid transparent;
+  border-right-color: #9BCEF2;
+  position: absolute;
+  top: 45%;
+  left: -65px;
+}
+.contact-page .contact-input {
+  width: 100%;
+  height: 350px;
+  margin-top: 25px;
+  margin-left: 60px;
+}
+.contact-page .contact-input input,
+.contact-page .contact-input textarea {
+  width: 70%;
+}
+.contact-page .contact-input textarea {
+  height: 120px;
+}
+.contact-page .contact-input .contact-button .btn {
+  width: 385px;
+  font-size: 20px;
+}
+.contact-page .non-input {
+  background: #9BCEF2;
+  width: 390px;
+  margin-top: 25px;
+  height: 330px;
+  padding: 30px;
+}
+.contact-page .non-input .glyphicon {
+  color: white;
+  font-size: 30px;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 30px;
+}
+.activing .contact-icon .glyphicon-send {
+  color: white;
+}
+.wait {
+  margin-top: -150px;
+  width: 60px;
+  height: 50px;
+}
+.wait div {
+  background: red;
+  width: 6px;
+  height: 100%;
+  display: inline-block;
+  -webkit-animation: strech 1.2s infinite ease-in-out;
+  animation: strech 1.2s infinite ease-in-out;
+}
+.wait .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.wait .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.wait .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.wait .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8;
+}
+@-webkit-keyframes strech {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes strech {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		.spinner{
+			width: 60px;
+			height: 60px;
+			background: red;
+			margin:100px auto;
+
+			-webkit-animation:rectRotate 1.2s infinite ease-in-out;
+			animation:rectRotate 1.2s infinite ease-in-out;
+		}
+		@-webkit-keyframes rectRotate{
+			0%{-webkit-transform:perspective(120px);}
+			50%{-webkit-transform:perspective(120px) rotateY(180deg);}
+			100%{-webkit-transform:perspective(120px) rotateY(180deg) rotateX(180deg);}
+		}
+		@keyframes rectRotate{
+			0%{
+				transfrom:perspective(120px) rotateX(0deg) rotateY(0deg);
+				-webkit-transform:perspective(120px) rotateX(0deg) rotateY(0deg);
+			}	
+			50%{
+				transform:perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+				-webkit-transform:perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+			}
+			100%{
+				transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+				-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+			}
+		
+		}
+	</style>
+</head>
+<body>
+	<div class="spinner">
+		
+	</div>
+</body>
+</html>

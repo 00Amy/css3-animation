@@ -1,0 +1,174 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background: #333;
+}
+.box{
+	width: 960px;
+	height: 280px;
+	margin:150px auto;
+	position: relative;
+}
+.box .link{
+	height:280px;
+	width: 200px;
+	float:left;
+	margin:0px 60px;
+}
+/*所有相同的属性都放在一个类里，每个不同的在设置一个类，减少代码量，还可以看的更清楚*/
+.link .icon{
+	display: inline-block;
+	height: 190px;
+	width: 100%;
+	transition:all 0.5s ease-out;
+	-webkit-transition:all 0.5s ease-out;
+	-o-transition:all 0.5s ease-out;
+	-moz-transition:all 0.5s ease-out;
+}
+.link .icon:hover{
+	transform:rotate(360deg) scale(1.3);
+	-webkit-transform:rotate(360deg) scale(1.3);
+	-o-transform:rotate(360deg) scale(1.3);
+	-moz-transform:rotate(360deg) scale(1.3);
+	-ms-transform:rotate(360deg) scale(1.3);
+}
+.link-mission .icon{
+	background:url(../images/mission.png) no-repeat center center;
+}
+.link-play .icon{
+	background:url(../images/play.png) no-repeat center center;
+}
+.link-touch .icon{
+	background:url(../images/touch.png) no-repeat center center;
+}
+.button{
+	width:190px;
+	height: 50px;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	line-height: 50px;
+	font-family: serif;
+	border:2px solid rgba(255,255,255,0.6);
+	color:#2DCB70;
+	font-size: 22px;
+	padding-left: 20px;
+	margin:0 auto;
+	/*box-sizing是使盒子大小等于设置的width和height，忽略padding等，这里就是190*/
+	box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	/*这里注意background可以一次性设置图片url和位置，一个是左右，一个是上下*/
+	background: url(../images/allow.png) no-repeat 130px center;
+	transition:all 0.8s ease;
+	-webkit-transition:all 0.8s ease;
+	-o-transition:all 0.8s ease;
+	-moz-transition:all 0.8s ease;
+	-ms-transition:all 0.8s ease;
+}
+.button:hover{
+	background-position: 145px center;
+	border:2px solid rgba(255,255,255,1);
+}
+/*transition的ease是先快后慢再快，ease-out是先快后慢*/
+.button .line{
+	display: block;
+	position:absolute;
+	background: none;
+	transition:all 2s ease;
+	-webkit-transition:all 0.4s ease;
+	-o-transition:all 0.4s ease;
+	-ms-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+}
+.button:hover .line{
+	background: #fff;
+}
+.button .line-top{
+	left:-40%;
+	top:-2px;
+	width:0px;
+	height: 2px;
+}
+.button:hover .line-top{
+	left:-2px;
+	width:100%;
+}
+.button .line-left{
+	width:2px;
+	height: 0px;
+	bottom:-160%;
+	left:-2px;
+}
+.button:hover .line-left{
+	height:100%;
+	bottom:-2px;
+}
+.button .line-right{
+	width:2px;
+	height: 0px;
+	top:-160%;
+	right:-2px;
+}
+.button:hover .line-right{
+	height: 100%;
+	top:-2px;
+}
+/*1.每一条线都是这种方法设置，开始右一个点变成一条线
+2.用transition使其变化
+3.改变的其实就是位置，最后让他跟border重合
+4.注意真正重合要设置bottom不是0;因为border本身还有宽度*/
+.button .line-bottom{
+	right:-40%;
+	bottom:-2px;
+	width:0px;
+	height: 2px;
+}
+
+.button:hover .line-bottom{
+	right:-2px;
+	width:100%;
+}
+
+.tip{
+	position: absolute;
+	height:35px;
+	line-height: 35px;
+	padding: 0 14px;
+	background: #2DCB70;
+	color:#fff;
+	font-size: 18px;
+	margin:0 60px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	top:100px;
+	opacity: 0;
+}
+/*消除em原先的斜体*/
+.tip em{
+	font-style: normal;
+}
+/*1.三角形的制作方法border-top-color设置顶的方向
+2.注意要设置block
+3.border的值的大小就是三角形的大小，注意设置成transparent
+4.注意三角形位置设定要定位，相对去前面一个元素tip*/
+.tip span{
+	display: block;
+	width:0px;
+	height: 0px;
+	border:7px solid transparent;
+	overflow: hidden;
+	border-top-color: #2DCB70;
+	position: absolute;
+	top:35px;
+	left:50%;
+	margin-left: -4px;
+}
